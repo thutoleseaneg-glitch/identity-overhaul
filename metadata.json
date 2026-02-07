@@ -1,0 +1,7 @@
+{
+  "name": "Identity Overhaul",
+  "description": "A comprehensive life tracking SaaS for managing dating, finances, hobbies, and fitness with AI-driven insights.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}

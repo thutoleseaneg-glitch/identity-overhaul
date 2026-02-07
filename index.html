@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identity Overhaul - Monochrome Edition</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #000000;
+            color: #ffffff;
+        }
+        .font-syne {
+            font-family: 'Syne', sans-serif;
+        }
+        /* Override tailwind for forced monochrome */
+        .bg-slate-50 { background-color: #000000 !important; }
+        .text-slate-900 { color: #ffffff !important; }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #000000;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #ffffff;
+            border-radius: 4px;
+        }
+        
+        /* Global dark theme defaults */
+        [data-theme="dark"], body {
+            background-color: #000000;
+            color: #ffffff;
+        }
+        
+        input, textarea, select {
+            background-color: #000000 !important;
+            color: #ffffff !important;
+            border-color: #ffffff !important;
+        }
+        
+        ::selection {
+            background: #ffffff;
+            color: #000000;
+        }
+
+        /* Performance optimizations */
+        .reduced-motion img {
+            animation: none !important;
+            transition: none !important;
+        }
+
+        /* iOS specific fixes */
+        .os-ios img {
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "three": "https://esm.sh/three@0.170.0",
+    "@google/genai": "https://esm.sh/@google/genai@^1.40.0"
+  }
+}
+</script>
+</head>
+<body class="bg-black text-white transition-colors duration-300">
+    <div id="root"></div>
+</body>
+</html>
